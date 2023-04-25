@@ -62,6 +62,44 @@ class Producer_Consumer:
 
         root.mainloop()
 
+    def parking(self, position):
+        if position == 1:
+            self.lbl_car_1 = Label(self.window, image=self.image)
+            self.lbl_car_1.place(x=2, y=35)
+        elif position == 2:
+            self.lbl_car_2 = Label(self.window, image=self.image)
+            self.lbl_car_2.place(x=103, y=35)
+        elif position == 3:
+            self.lbl_car_3 = Label(self.window, image=self.image)
+            self.lbl_car_3.place(x=207, y=35)
+        elif position == 4:
+            self.lbl_car_4 = Label(self.window, image=self.image)
+            self.lbl_car_4.place(x=310, y=35)
+        elif position == 5:
+            self.lbl_car_5 = Label(self.window, image=self.image)
+            self.lbl_car_5.place(x=414, y=35)
+        elif position == 6:
+            self.lbl_car_6 = Label(self.window, image=self.image)
+            self.lbl_car_6.place(x=516, y=35)
+        elif position == 7:
+            self.lbl_car_7 = Label(self.window, image=self.image)
+            self.lbl_car_7.place(x=2, y=205)
+        elif position == 8:
+            self.lbl_car_8 = Label(self.window, image=self.image)
+            self.lbl_car_8.place(x=103, y=205)
+        elif position == 9:
+            self.lbl_car_9 = Label(self.window, image=self.image)
+            self.lbl_car_9.place(x=207, y=205)
+        elif position == 10:
+            self.lbl_car_10 = Label(self.window, image=self.image)
+            self.lbl_car_10.place(x=310, y=205)
+        elif position == 11:
+            self.lbl_car_11 = Label(self.window, image=self.image)
+            self.lbl_car_11.place(x=414, y=205)
+        elif position == 12:
+            self.lbl_car_12 = Label(self.window, image=self.image)
+            self.lbl_car_12.place(x=516, y=205)
+
 def open_image(name, size_1, size_2):
     image = Image.open(name)
     new_image = image.resize((size_1, size_2))
