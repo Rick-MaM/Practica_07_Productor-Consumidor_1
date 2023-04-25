@@ -99,6 +99,32 @@ class Producer_Consumer:
         elif position == 12:
             self.lbl_car_12 = Label(self.window, image=self.image)
             self.lbl_car_12.place(x=516, y=205)
+    
+    def remove(self, position):
+        if position == 1:
+            self.lbl_car_1.destroy()
+        elif position == 2:
+            self.lbl_car_2.destroy()
+        elif position == 3:
+            self.lbl_car_3.destroy()
+        elif position == 4:
+            self.lbl_car_4.destroy()
+        elif position == 5:
+            self.lbl_car_5.destroy()
+        elif position == 6:
+            self.lbl_car_6.destroy()
+        elif position == 7:
+            self.lbl_car_7.destroy()
+        elif position == 8:
+            self.lbl_car_8.destroy()
+        elif position == 9:
+            self.lbl_car_9.destroy()
+        elif position == 10:
+            self.lbl_car_10.destroy()
+        elif position == 11:
+            self.lbl_car_11.destroy()
+        elif position == 12:
+            self.lbl_car_12.destroy()
 
 def open_image(name, size_1, size_2):
     image = Image.open(name)
