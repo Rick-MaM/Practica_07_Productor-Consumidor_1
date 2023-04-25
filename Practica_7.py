@@ -22,6 +22,16 @@ class Producer_Consumer:
         menu_bar.add_cascade(label="Editar", menu=menu_producer_consumer)
         self.window.config(menu=menu_bar)
 
+    def is_time_random(self, producer_or_consumer):
+        if (self.time_consumer == "Aleatorio" and producer_or_consumer == "consumer") or (self.time_producer == "Aleatorio" and producer_or_consumer == "producer"):
+            rand = random.randint(0, 2)
+            return self.List_time[rand]
+        else:
+            if self.time_producer != "Aleatorio" and producer_or_consumer == "producer":
+                return float(self.time_producer)
+            if self.time_consumer != "Aleatorio" and producer_or_consumer == "consumer":
+                return float(self.time_consumer)
+
 def open_image(name, size_1, size_2):
     image = Image.open(name)
     new_image = image.resize((size_1, size_2))
