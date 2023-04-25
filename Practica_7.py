@@ -125,6 +125,20 @@ class Producer_Consumer:
             self.lbl_car_11.destroy()
         elif position == 12:
             self.lbl_car_12.destroy()
+    
+    def Star_producer(self):
+        count_car = 0
+        while True:
+            if len(self.List_cars) < 12:
+                self.List_cars.append(count_car)
+                count_car += 1
+                if count_car > 12:
+                    count_car = 0
+                else:
+                    self.parking(count_car)
+            else:
+                pass
+            time.sleep(self.is_time_random("producer"))
 
 def open_image(name, size_1, size_2):
     image = Image.open(name)
