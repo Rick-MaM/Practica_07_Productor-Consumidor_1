@@ -167,5 +167,10 @@ if __name__ == "__main__":
     imag_2 = open_image("Vehiculo.png", 80, 150)
 
     app = Producer_Consumer(imag_2, window)
+    t1 = threading.Thread(name="Hilo_1", target=app.Start_producer)
+    t2 = threading.Thread(name="Hilo_2", target=app.Start_consumer)
+
+    t2.start()
+    t1.start()
 
     window.mainloop()
