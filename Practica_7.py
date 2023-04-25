@@ -126,7 +126,7 @@ class Producer_Consumer:
         elif position == 12:
             self.lbl_car_12.destroy()
     
-    def Star_producer(self):
+    def Start_producer(self):
         count_car = 0
         while True:
             if len(self.List_cars) < 12:
@@ -139,6 +139,15 @@ class Producer_Consumer:
             else:
                 pass
             time.sleep(self.is_time_random("producer"))
+    
+    def Start_consumer(self):
+        while True:
+            if len(self.List_cars) > 0:
+                self.remove(self.List_cars[0])
+                self.List_cars.pop(0)
+            else:
+                pass
+            time.sleep(self.is_time_random("consumer"))
 
 def open_image(name, size_1, size_2):
     image = Image.open(name)
